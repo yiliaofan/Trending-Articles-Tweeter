@@ -6,8 +6,8 @@ require ("thmOAuth/tmhUtilities.php");
 
 	$username = 'dailyHedera';
 	$pass = 'password';
-	$db = 'dailyHedera';
-	$domain = 'dailyHedera.db.9990839.hostedresource.com';
+	$db = 'db';
+	$domain = 'domain';
 $tweet_used = (bool)false;
 $pub_used = (bool)false;
 
@@ -208,10 +208,10 @@ ORDER BY  `pub_check`.`id` ASC ";
 // tweet that bad mother fuckin shit!
 function post_tweet($tweet){
 	$tmhOAuth = new tmhOAuth(array(
-  'consumer_key'    => 'VsdKAiu0Sp30JfdUi3pu5A',
-  'consumer_secret' => 'GoFCwcjVdPSf1VeR2dXIzfSTxKJ8uI4ilMFqCCys',
-  'user_token'      => '416631658-WE0OwH956uvMQpwQT4dplgKcQ0N5IeWrgALgiXli',
-  'user_secret'     => 'KHIkztw6ZdUd9k0bbOJXfgez9xGjtqpL0w7HoJvCk8',
+  'consumer_key'    => 'key',
+  'consumer_secret' => 'secret',
+  'user_token'      => 'user_token',
+  'user_secret'     => 'user_secret',
 ));
 
 $code = $tmhOAuth->request('POST', $tmhOAuth->url('1/statuses/update'), array(
@@ -232,7 +232,7 @@ $createDate = date("m-d-Y h:i:s", $date[0]);
 // Shortens post url
 function bit_ly($url){
 	$login = 'flashfad';
-	$appkey="R_287943cfc2dea85039add6df6b49fbee";
+	$appkey="appkey";
 	$format='txt';
 	$connectURL = 'http://api.bit.ly/v3/shorten?login='.$login.'&apiKey='.$appkey.'&uri='.urlencode($url).'&format='.$format;
   return file_get_contents($connectURL);
@@ -269,11 +269,10 @@ mysql_query($dupTable_query) or die(mysql_error());
 
 // Post link to Facebook
 function postToFB($fb_url, $fb_title){
-			$fbapp_id = '249430155111050';
-		$fbappsecret_id = 'f8dd3d6244f9009e38202ec283883a3b';
-		$app_access_token = '249430155111050|bT3wV796CkbA7ArU5haFIGfZG4k';
-		//$access_token = 'AAADi2vvKqooBAG06ZBaFY2DQ9ycWFa8U7k9aZCq2Q4KhP609O5G0DPuJxiXe2iSMlkBAmoF6WghPYW7RlwkKp7VTHpfQZC6hvZBPm9sfQAZDZD';
-		$access_token = 'AAADi2vvKqooBAHXoYJyGMIbg4C6gFAXGoG8NRNhyPvnmBONKzwMc4qmY88b5vIY8MdkMC7httImo0AbQ7LBEoJHWE7b5quZCNtsFnovAdvyOnZAjOX';
+			$fbapp_id = 'app_id';
+		$fbappsecret_id = 'app_secret';
+		$app_access_token = 'access_token';
+		$access_token = 'access_token';
 	
 	$url = "https://graph.facebook.com/142672305853940/feed";
 	$fields = array (
