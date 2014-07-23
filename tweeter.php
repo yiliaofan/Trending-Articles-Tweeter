@@ -4,7 +4,7 @@
 require ("thmOAuth/tmhOAuth.php");
 require ("thmOAuth/tmhUtilities.php");
 
-	$username = 'dailyHedera';
+	$username = 'user';
 	$pass = 'password';
 	$db = 'db';
 	$domain = 'domain';
@@ -231,7 +231,7 @@ $createDate = date("m-d-Y h:i:s", $date[0]);
 
 // Shortens post url
 function bit_ly($url){
-	$login = 'flashfad';
+	$login = 'user';
 	$appkey="appkey";
 	$format='txt';
 	$connectURL = 'http://api.bit.ly/v3/shorten?login='.$login.'&apiKey='.$appkey.'&uri='.urlencode($url).'&format='.$format;
