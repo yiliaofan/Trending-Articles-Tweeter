@@ -3,10 +3,10 @@
 	
 
 	
-	$username = 'dailyHedera';
+	$username = 'user';
 	$pass = 'password';
-	$database = 'dailyHedera';
-	$domain = 'dailyHedera.db.9990839.hostedresource.com';
+	$database = 'db';
+	$domain = 'host';
 	$total = 0;
 	$token = $_GET['token'];
 
